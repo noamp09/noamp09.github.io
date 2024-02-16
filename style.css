@@ -1,6 +1,8 @@
 body {
     font-family: 'roboto', sans-serif;
-  }
+    flex: 1;
+    overflow: auto;
+}
 
 button:hover{
     cursor: pointer;
@@ -14,9 +16,9 @@ button:hover{
     background-color: #1f2937;
 }
 
- /* header section */
+/* header section */
 
- .header{
+.header{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -59,9 +61,23 @@ button:hover{
     font-weight: 300;
 }
 
+.sign-up-button{
+    border: transparent;
+    margin-top: 10px;
+    background-color: #3882f6;
+    color: #f9faf8;
+    padding: 8px 30px;
+    border-radius: 7px;
+    font-weight: 550;
+    font-size: 16px;
+}
+
 .hero .pic{
-    box-shadow: 8px -8px 30px rgb(144, 179, 212);
-    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6d747d;
+    color: #ebebeb;
     width: 500px;
     height: 235px;
 }
@@ -87,18 +103,20 @@ button:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap; /* Added flex-wrap to enable wrapping */
 }
 
 .subtext-container .subtext{
     display: flex;
     flex-direction: column;
+    text-align: center;
     margin: 25px;
     width: 150px;
     height: 250px;
     gap: 10px;
 }
 
-.subtext .pic{
+.subtext .empty-box{
     height: 150px;
     width: inherit;
     border-radius: 15px;
@@ -123,11 +141,43 @@ button:hover{
     color: #1f2937;
 }
 
-.quoter{
-    margin-top: 20px;
+.thor{
     font-size: 25px;
     align-self: flex-end;
     font-weight: bold;
+}
+
+/* contact section */
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+}
+
+.call{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    height: 140px;
+    width: 1000px;
+    background-color: #3b82f6;
+}
+
+.call .sign-up-button{
+    border: solid 2.3px #e5e7eb;
+}
+
+.call .main-text{
+    color: #f9faf8;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.call .text{
+    color: #e5e7eb;
 }
 
 /* copyright section */
