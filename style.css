@@ -5,7 +5,11 @@ body {
   button:hover {
     cursor: pointer;
   }
-  
+
+  .header, .quote, .top, .copyright, .mid{
+    width: 100vw;
+  }
+
   .top,
   .mid,
   .quote {
