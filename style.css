@@ -57,6 +57,7 @@ body {
   }
   
   .hero .text {
+    max-width: 500px;
     box-sizing: border-box; /* Ensure margin is calculated correctly */
     margin-left: 30px; /* Your desired left margin */
   }
