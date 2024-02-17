@@ -6,10 +6,6 @@ body {
     cursor: pointer;
   }
 
-  .header, .quote, .top, .copyright, .mid{
-    width: 100vw;
-  }
-
   .top,
   .mid,
   .quote {
@@ -54,16 +50,15 @@ body {
   }
   
   .hero {
-    margin-top: 100px;
+    margin-top: 60px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Align elements to the left */
     align-items: center;
   }
   
   .hero .text {
-    width: 445px;
-    margin-right: 50px;
-    margin-bottom: 30px; /* Adjust margin to prevent text overlapping image */
+    box-sizing: border-box; /* Ensure margin is calculated correctly */
+    margin-left: 30px; /* Your desired left margin */
   }
   
   .text .main-text {
@@ -82,8 +77,8 @@ body {
   .hero .pic {
     box-shadow: 8px -8px 30px rgb(144, 179, 212);
     border-radius: 15px;
-    width: 500px;
-    height: 235px;
+    width: 400px;
+    aspect-ratio: 2 / 1;
   }
   
   /* mid section */
@@ -120,7 +115,6 @@ body {
   /* quote section */
   
   .quote {
-    overflow-x: auto;
     display: flex; /* Make the quote section a flex container */
     flex-direction: column; /* Stack elements vertically by default */
     align-items: center; /* Center content horizontally */
@@ -128,7 +122,8 @@ body {
   }  
   
   .quote .text {
-    width: 790px;
+    max-width: 790px;
+    flex: 1;
     font-size: 36px;
     font-style: italic;
     font-weight: 300;
@@ -159,9 +154,13 @@ body {
   
   /* Media queries for additional responsiveness adjustments (optional) */
   
-  @media (max-width: 790px) {
+  @media (max-width: 1000px) {
     .hero {
       flex-wrap: wrap; /* Optionally wrap text and image on small screens */
+    }
+    .hero .pic{
+      margin-top: 30px;
+      width: 85vw;
     }
     .quote .text {
       flex: 1; /* Allow full width when screen is narrower */
