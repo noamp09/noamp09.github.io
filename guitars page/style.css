@@ -1,0 +1,170 @@
+body {
+    font-family: 'roboto', sans-serif;
+  }
+  
+  button:hover {
+    cursor: pointer;
+  }
+
+  .top,
+  .mid,
+  .quote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px; /* Updated padding value */
+    overflow-wrap: break-word;
+  }
+  
+  .top {
+    background-color: #1f2937;
+  }
+  
+  .mid {
+    background-color: white;
+  }
+  
+  .quote {
+    background-color: #e5e7eb;
+  }
+  
+  /* header section */
+  
+  .header {
+    display: flex;
+    justify-content: space-between; /* Justifies elements horizontally */
+    align-items: center;
+  }
+  
+  .links-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow links to wrap on smaller screens */
+  }
+  
+  .logo {
+    margin-right: 100px;
+    font-size: 24px;
+    color: #f9faf8;
+    font-weight: bold;
+  }
+  
+  .hero {
+    margin-top: 60px;
+    display: flex;
+    justify-content: flex-start; /* Align elements to the left */
+    align-items: center;
+  }
+  
+  .hero .text {
+    max-width: 500px;
+    box-sizing: border-box; /* Ensure margin is calculated correctly */
+    margin-left: 30px; /* Your desired left margin */
+  }
+  
+  .text .main-text {
+    color: #f9faf8;
+    font-size: 48px;
+    font-weight: bolder;
+  }
+  
+  .text .secondary-text, a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #e5e7eb;
+    font-weight: 300;
+  }
+  
+  .hero .pic {
+    box-shadow: 8px -8px 30px rgb(144, 179, 212);
+    border-radius: 15px;
+    width: 400px;
+    aspect-ratio: 2 / 1;
+  }
+  
+  /* mid section */
+  
+  .mid .information {
+    margin: 30px;
+    font-weight: 800;
+    font-size: 35px;
+  }
+  
+  .subtext-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow subtext sections to wrap on smaller screens */
+  }
+  
+  .subtext-container .subtext {
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+    width: 150px;
+    height: 250px;
+    gap: 10px;
+  }
+  
+  .subtext .pic {
+    height: 150px;
+    width: inherit;
+    border-radius: 15px;
+    border: solid #3b82f6;
+  }
+  
+  /* quote section */
+  
+  .quote {
+    display: flex; /* Make the quote section a flex container */
+    flex-direction: column; /* Stack elements vertically by default */
+    align-items: center; /* Center content horizontally */
+    flex-wrap: wrap;
+  }  
+  
+  .quote .text {
+    max-width: 790px;
+    flex: 1;
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 300;
+    color: #1f2937;
+  }
+  
+  .quoter {
+    margin-top: 20px;
+    font-size: 25px;
+    align-self: flex-end;
+    font-weight: bold;
+  }
+  
+  /* copyright section */
+  .copyright {
+    height: 100px;
+    background-color: #1f2937;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .copyright .text {
+    justify-self: center;
+    color: #e5e7eb;
+    font-size: 18px;
+  }
+  
+  /* Media queries for additional responsiveness adjustments (optional) */
+  
+  @media (max-width: 1000px) {
+    .hero {
+      flex-wrap: wrap; /* Optionally wrap text and image on small screens */
+    }
+    .hero .pic{
+      margin-top: 30px;
+      width: 85vw;
+    }
+    .quote .text {
+      flex: 1; /* Allow full width when screen is narrower */
+    }
+  }
+  
