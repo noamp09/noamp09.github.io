@@ -25,8 +25,8 @@ body {
   margin: 5px;
   display: grid;
   min-height: 150vh;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr; 
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.7fr 1fr; 
   grid-template-areas:
     "about about about"
     "projects projects projects"
@@ -203,17 +203,22 @@ a:hover {
     font-size: 1rem;
   }
 
-  #about {
-    flex-direction: column;
-  }
-
   p {
     font-size: 0.8rem;
   }
 
+  #about {
+    flex-direction: column;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr 0.7fr; 
+  }
+
   #projects-container {
     grid-template-columns: 1fr;
-    grid-auto-rows: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
     gap: var(--grid-gap);
   }
 
